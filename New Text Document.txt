@@ -1,0 +1,25 @@
+1.php artisan make:controller ViewController => for make controller make like - StudentController,ProductController etc.
+
+2.Route::get('/', [ViewController::class, 'index']); => to load a function from a controller to web.php route
+or, Route::get('/', [ViewController::class, 'index'])->name('home'); to set the route name//// we could use both to do the work
+3.return view('test'); write those to your controller class method here test will be view blade page name that goes to resource view folder like- demo,test etc...
+
+4.{{ url('/') }} to get the link in a tag like- url('/about'), url('/contact') etc that should match with routes web.php
+or we could use {{ Route('') }} here between the Route('name created to route name on 2no. Route name should be same with to linking')
+
+5. project assets shoul be in the public folder like - css,js,img,fontawesome etc
+
+6.to link the css,js,script other thing we have to write {{ asset('/') }}css/bootstrap.css or {{ asset('/css/bootstrap.css') }}
+{{ asset('/') }} we go to the public or main url path
+7.@extend is blade syntax and its called directive. there is many more to show write @ and it shows many directive
+
+8. write yeild('title') to the master blade page and that make @section('title(same as yeild nameing')
+and close with @endsection
+
+9. store json viewer to the web browser to show the form data to like print_r() method in php
+
+
+
+
+
+
