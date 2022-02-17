@@ -58,4 +58,15 @@ class ViewController extends Controller
     {
         return view('contact');
     }
+    public function detail($idanythingagain)
+    {
+        $this->products = Product::getAllProduct();
+        foreach ($this->products as $item)
+        {
+            if ($item['id'] == $idanythingagain)
+            {
+                return view('detail', ['dataanything' => $item]);
+            }
+        }
+    }
 }

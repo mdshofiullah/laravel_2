@@ -19,11 +19,9 @@
                     <div class="card-body">
                         <h3 class="card-title">{{ $product['name'] }}</h3>
                         <p>Tk. {{ $product['price'] }}</p>
-                        <p class="card-text">{{ $product['description'] }}</p>
                         <hr/>
-                        <a href="" class="btn btn-outline-success center">Details</a>
+                        <a href="{{ route('detail',['idanything' => $product['id']]) }}" class="btn btn-outline-success center">Details</a>
                     </div>
-
                 </div>
                 @endforeach
             </div>
